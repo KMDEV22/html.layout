@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-LAYOUT</title>
+</head>
+<style>
+    body{
+        width: 90%;
+        height: 90%;
+        position: absolute;
+
+    }
+    .container{
+        border: 2px solid ;
+        display:flex ;
+        width: 60%;
+        height: inherit;
+        flex-direction: column;
+        padding: 20px;
+        
+    }
+    .square-box{
+        border: 2px solid;
+        display: flex;
+        flex: 2;
+        width: 50%;
+        padding: 10px;
+        
+    }
+    .rect-box{
+        border: 2px solid;
+        display: flex;
+        flex: 2;
+        width: 30%;
+        padding: 10px;
+        align-self: flex-end;
+        margin-bottom: 20px;
+
+    }
+    .insidebox{
+        border: 3px solid;
+        width: 100px;
+        height: 100px;
+        /* align-self: flex-end;
+        justify-self: center; */
+        margin: auto 10px auto auto;
+    
+    }
+    .square-box .insidebox{
+        margin: auto auto 10px auto;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="rect-box">
+            <div class="insidebox"></div>
+        </div>
+        <div class="square-box">
+            <div class="insidebox"></div>
+        </div>
+
+    </div>
+</body>
+</html>
