@@ -21,15 +21,16 @@
         padding: 20px;
         
     }
-    .square-box{
+    .rect-box{
         border: 2px solid;
         display: flex;
         flex: 2;
         width: 50%;
         padding: 10px;
-        
+        justify-content: center ;
+        align-items: flex-end;
     }
-    .rect-box{
+    .square-box{
         border: 2px solid;
         display: flex;
         flex: 2;
@@ -37,31 +38,39 @@
         padding: 10px;
         align-self: flex-end;
         margin-bottom: 20px;
-
+        justify-content: flex-end;
+        align-items: center;
     }
     .insidebox{
         border: 3px solid;
         width: 100px;
         height: 100px;
-        /* align-self: flex-end;
-        justify-self: center; */
-        margin: auto 10px auto auto;
+
+        /* margin: auto 10px auto auto; */
+        
     
     }
     .square-box .insidebox{
-        margin: auto auto 10px auto;
-
+        /* margin: auto auto 10px auto; */
+        
+    }
+    .black{
+        background: black;
+    }
+    .red{
+        background: red;
     }
 </style>
 <body>
     <div class="container">
-        <div class="rect-box">
-            <div class="insidebox"></div>
-        </div>
         <div class="square-box">
-            <div class="insidebox"></div>
+            <div class="insidebox" onclick="addClass('black',event)" ondblclick="removeClass('black',event)">
+            </div>
         </div>
-
+        <div class="rect-box">
+            <div class="insidebox" onclick="addClass('red',event)" ondblclick="removeClass('red',event)"></div>
+        </div>
     </div>
+    <script src="./coloring.js"></script>
 </body>
 </html>
