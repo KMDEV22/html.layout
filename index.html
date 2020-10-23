@@ -6,25 +6,62 @@
     <title>HTML-LAYOUT</title>
 </head>
 <style>
-    .container{
-        border: 2px solid ;
-        height: 600px;
-        width: 100%;
-        display:flex ;
-        justify-content: center;
-        align-items: center;
-        /* padding-left: 20px; */
+    body{
+        width: 90%;
+        height: 90%;
+        position: absolute;
 
     }
-    .big-box{
+    .container{
+        border: 2px solid ;
+        display:flex ;
+        width: 60%;
+        height: inherit;
+        flex-direction: column;
+        padding: 20px;
+        
+    }
+    .square-box{
         border: 2px solid;
-        height: 200px;
-        width: 200px;
+        display: flex;
+        flex: 2;
+        width: 50%;
+        padding: 10px;
+        
+    }
+    .rect-box{
+        border: 2px solid;
+        display: flex;
+        flex: 2;
+        width: 30%;
+        padding: 10px;
+        align-self: flex-end;
+        margin-bottom: 20px;
+
+    }
+    .insidebox{
+        border: 3px solid;
+        width: 100px;
+        height: 100px;
+        /* align-self: flex-end;
+        justify-self: center; */
+        margin: auto 10px auto auto;
+    
+    }
+    .square-box .insidebox{
+        margin: auto auto 10px auto;
+
     }
 </style>
 <body>
     <div class="container">
-        <div class="big-box"></div>
+        <div class="rect-box">
+            <div class="insidebox"></div>
+        </div>
+        <div class="square-box">
+            <div class="insidebox"></div>
+        </div>
+
     </div>
 </body>
 </html>
